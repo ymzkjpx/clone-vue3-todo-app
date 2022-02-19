@@ -28,7 +28,7 @@ const mockTodo: Todo[] = [
   }
 ]
 
-const state: TodoState = reactive<{todos: Todo[]}>({
+const state: TodoState = reactive<{ todos: Todo[] }>({
   todos: mockTodo
 })
 
