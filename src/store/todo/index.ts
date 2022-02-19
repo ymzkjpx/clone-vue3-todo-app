@@ -1,5 +1,5 @@
 import { InjectionKey, reactive, readonly } from 'vue'
-import { Todo, Params, TodoState, TodoStore } from '@/store/todo/types'
+import { Params, Todo, TodoState, TodoStore } from '@/store/todo/types'
 
 const mockTodo: Todo[] = [
   {
@@ -8,7 +8,7 @@ const mockTodo: Todo[] = [
     description: 'at first',
     status: 'waiting',
     createdAt: new Date('2022-02-01'),
-    updatedAt: new Date('2022-02-01'),
+    updatedAt: new Date('2022-02-01')
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const mockTodo: Todo[] = [
     description: 'at second',
     status: 'waiting',
     createdAt: new Date('2022-02-02'),
-    updatedAt: new Date('2022-02-02'),
+    updatedAt: new Date('2022-02-02')
   },
   {
     id: 3,
@@ -24,12 +24,12 @@ const mockTodo: Todo[] = [
     description: 'at third',
     status: 'waiting',
     createdAt: new Date('2022-02-03'),
-    updatedAt: new Date('2022-02-03'),
-  },
+    updatedAt: new Date('2022-02-03')
+  }
 ]
 
-const state = reactive<TodoState>({
-  todos: mockTodo,
+const state: TodoState = reactive<{todos: Todo[]}>({
+  todos: mockTodo
 })
 
 const initializeTodo = (todo: Params) => {
@@ -40,7 +40,7 @@ const initializeTodo = (todo: Params) => {
     description: todo.description,
     status: todo.status,
     createdAt: date,
-    updatedAt: date,
+    updatedAt: date
   } as Todo
 }
 
@@ -73,7 +73,7 @@ const todoStore: TodoStore = {
   getTodo,
   addTodo,
   updateTodo,
-  deleteTodo,
+  deleteTodo
 }
 
 export default todoStore

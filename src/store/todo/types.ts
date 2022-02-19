@@ -12,7 +12,7 @@ export interface Todo {
 }
 
 export interface TodoState {
-  todos: Todo[]
+  todos: Todo[],
 }
 
 export type Params = Pick<Todo, 'title' | 'description' | 'status'>
