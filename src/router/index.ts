@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router'
-import Todos from '@/views/todos.vue'
+import Todos from '@/views/top-todos.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {

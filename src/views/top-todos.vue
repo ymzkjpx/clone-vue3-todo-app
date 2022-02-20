@@ -1,4 +1,8 @@
-<template>TODO一覧です。</template>
+<template>
+  <h1>
+    TODO一覧です。
+  </h1>
+</template>
 
 <script lang="ts">
 import { defineComponent, inject } from 'vue'
@@ -10,7 +14,6 @@ export default defineComponent({
     if (!todoStore) {
       throw new Error('todoStore is not provided')
     }
-
     return {
       todoStore,
     }
