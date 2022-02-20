@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router'
-import Todos from '@/views/top-todos.vue'
+import Todos from '@/views/TodosPage.vue'
 import HelloWorld from '@/components/HelloWorld.vue'
+import AddTodo from '@/views/AddTodo.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -12,6 +13,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/hello-world',
     name: 'HelloWorld',
     component: HelloWorld
+  },
+  {
+    path: '/new',
+    name: 'AddTodo',
+    component: AddTodo
   }
 ]
 

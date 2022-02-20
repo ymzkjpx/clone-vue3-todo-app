@@ -2,15 +2,10 @@
   <router-view />
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import TodoStore, { todoKey } from '@/store/todo'
-import { defineComponent, provide } from 'vue'
-
-export default defineComponent({
-  setup(){
-    provide(todoKey, TodoStore)
-  }
-})
+import { provide } from 'vue'
+provide(todoKey, TodoStore)
 </script>
 
 <style>
