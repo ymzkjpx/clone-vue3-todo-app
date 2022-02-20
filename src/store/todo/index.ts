@@ -68,7 +68,7 @@ const deleteTodo = (id: number) => {
   state.todos = state.todos.filter((todo) => todo.id !== id)
 }
 
-const todoStore: TodoStore = {
+export const todoStore: TodoStore = {
   state: readonly(state),
   getTodo,
   addTodo,
