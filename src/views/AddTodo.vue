@@ -4,7 +4,7 @@ import { todoKey } from '@/store/todo'
 import { useRouter } from 'vue-router'
 import { Params } from '@/store/todo/types'
 
-const todoStore = (function(){
+const todoStore = (()=>{
   if (!inject(todoKey)) throw new Error('todoStore is not provided')
   return inject(todoKey)
 })()

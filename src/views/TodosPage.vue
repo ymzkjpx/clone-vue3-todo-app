@@ -26,10 +26,9 @@
 import { inject } from 'vue'
 import { todoKey } from '@/store/todo'
 
-const todoStore = (function(){
+const todoStore = (()=>{
   const todoStore = inject(todoKey)
   if (! todoStore) throw new Error('todoStore is not provided')
 return todoStore
 })()
-console.log(todoStore)
 </script>
